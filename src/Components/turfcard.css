@@ -1,0 +1,53 @@
+
+.turf-card {
+  background-color: #1a3c34;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  transition: transform 0.2s;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.turf-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.turf-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.turf-card-content {
+  padding: 1rem;
+}
+
+.turf-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+  color: #4caf50;
+}
+
+.turf-card-description {
+  font-size: 0.9rem;
+  color: #a0b0a8;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+.turf-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.turf-card-info span {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
