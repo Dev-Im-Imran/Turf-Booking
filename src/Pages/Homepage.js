@@ -1,0 +1,36 @@
+import React from "react";
+import Turfcard from "../Components/Turfcard";
+import "./Homepage.css";
+import { useState } from "react";
+import TurfDetails from "./TurfDetails";
+import Search from "../Components/Search";
+
+const Homepage = () => {
+  const turfs = [
+    {
+      id: 1,
+      name: "GreenField Turf",
+      image: "https://picsum.photos/200/300",
+      location: "Downtown",
+      price: 50,
+      description: "A premium turf with excellent facilities.",
+    },
+  ];
+
+  const slots = ["09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM"];
+
+  return (
+    <div className="Homepage-container">
+      <Search />
+      <div className="turf-grid">
+        {turfs
+        ? turfs.map((item) => (
+          <Turfcard key={item.id} item={item} />
+        ))
+        : console.log("ERROR")}
+      </div>
+    </div>
+  );
+};
+
+export default Homepage;
