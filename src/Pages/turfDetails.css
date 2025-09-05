@@ -63,7 +63,15 @@
 }
 
 /* Slot Container */
+
+.slot-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .slot-container {
+  width: 90%;
   background: #111827;
   border: 2px solid #16a34a;
   border-radius: 12px;
@@ -72,8 +80,14 @@
 /* Slot Grid - 4 per row */
 .slot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
+  padding: 13px;
+}
+
+.slot-container h2{
+  padding: 15px;
+  color: #22c55e;
 }
 
 /* Slot Checkbox Box */
@@ -82,7 +96,7 @@
   background: #1f2937;
   border: 2px solid #16a34a;
   border-radius: 8px;
-  padding: 12px;
+  padding: 8WSpx 12px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
@@ -91,14 +105,19 @@
 /* Hide input */
 .slot-input {
   display: none;
+  
 }
 
 /* Label styling */
 .slot-label {
   color: #d1d5db;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   padding: 12px 20px 12px 20px;
+  white-space: normal;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1.3;
   
 }
 
@@ -112,3 +131,13 @@
   color: #22c55e;
   font-weight: bold;
 }
+
+@media (max-width: 480px) {
+  .slot-label {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+

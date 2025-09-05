@@ -5,15 +5,15 @@ import { useState } from "react";
 
 const TurfDetails = () => {
   const slots = [
-    "05:00 AM - 06:00 AM",
-    "06:00 AM - 07:00 AM",
-    "07:00 AM - 08:00 AM",
-    "08:00 AM - 09:00 AM",
-    "09:00 AM - 10:00 AM",
-    "10:00 AM - 11:00 AM",
-    "11:00 AM - 12:00 PM",
-    "12:00 PM - 01:00 PM",
-    "01:00 PM - 02:00 PM",
+    "05:00 AM",
+    "06:00 AM",
+    "07:00 AM",
+    "08:00 AM",
+    "09:00 AM",
+    "10:00 AM",
+    "11:00 AM",
+    "12:00 PM",
+    "01:00 PM",
   ];
 
   const [selectedSlot, setSelectedSlot] = useState(null);
@@ -42,21 +42,11 @@ const TurfDetails = () => {
         </div>
       </div>
 
-      <div className="container my-5 p-4 slot-container">
-        <h2 className="mb-4 text-white">Select Slots</h2>
+      <div className="slot-div">
+        <div className="container my-5 p-4 slot-container">
+        <h2 className="mb-4">Select Slots</h2>
         <div className="slot-grid">
-          {[
-            "07:00 - 08:00",
-            "08:00 - 09:00",
-            "09:00 - 10:00",
-            "10:00 - 11:00",
-            "11:00 - 12:00",
-            "12:00 - 13:00",
-            "13:00 - 14:00",
-            "14:00 - 15:00",
-            "15:00 - 16:00",
-            "16:00 - 17:00",
-          ].map((time, index) => (
+          {slots.map((time, index) => (
             <div className="slot-check" key={index}>
               <input
                 type="checkbox"
@@ -70,6 +60,8 @@ const TurfDetails = () => {
           ))}
         </div>
       </div>
+      </div>
+
     </div>
   );
 };
