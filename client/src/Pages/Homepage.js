@@ -19,16 +19,18 @@ const Homepage = () => {
 
 
   return (
-    <div className="Homepage-container">
+    <>
       <Search />
-      <div className="turf-grid">
-        {turfs
-        ? turfs.map((item) => (
-          <Turfcard key={item.id} item={item} />
-        ))
-        : console.log("ERROR")}
+      <div className="Homepage">
+        <div className="turf-grid">
+          {turfs
+            ? turfs.map((item) => (
+              <Turfcard key={item.id} item={item} />
+            ))
+            : console.log("ERROR")}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,10 @@
-.Homepage-container {
+.Homepage {
+  min-height: 100vh;
   background-color: #2e4d47;
+  padding-top: 70px;
 }
+
+
 .turf-grid {
   display: flex;
   flex-wrap: wrap;
